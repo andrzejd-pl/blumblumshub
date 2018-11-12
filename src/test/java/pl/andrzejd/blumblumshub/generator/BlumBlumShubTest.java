@@ -1,6 +1,5 @@
 package pl.andrzejd.blumblumshub.generator;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -17,23 +16,19 @@ class BlumBlumShubTest {
         blumBlumShub.setSeed(57);
     }
 
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
     void generateNext() {
-        assertEquals(BigInteger.valueOf(37), blumBlumShub.generateNext());
-        assertEquals(BigInteger.valueOf(60), blumBlumShub.generateNext());
-        assertEquals(BigInteger.valueOf(58), blumBlumShub.generateNext());
-        assertEquals(BigInteger.valueOf(53), blumBlumShub.generateNext());
+        assertEquals(BigInteger.valueOf(15), blumBlumShub.generateNext());
+        assertEquals(BigInteger.valueOf(71), blumBlumShub.generateNext());
+        assertEquals(BigInteger.valueOf(36), blumBlumShub.generateNext());
+        assertEquals(BigInteger.valueOf(64), blumBlumShub.generateNext());
     }
 
     @Test
     void generateIBit() {
-        assertEquals(BigInteger.valueOf(37), blumBlumShub.generateIBit(0));
-        assertEquals(BigInteger.valueOf(60), blumBlumShub.generateIBit(1));
-        assertEquals(BigInteger.valueOf(58), blumBlumShub.generateIBit(2));
-        assertEquals(BigInteger.valueOf(53), blumBlumShub.generateIBit(3));
+        assertEquals(BigInteger.valueOf(15), blumBlumShub.generateIBit(0));
+        assertEquals(BigInteger.valueOf(71), blumBlumShub.generateIBit(1));
+        assertEquals(BigInteger.valueOf(36), blumBlumShub.generateIBit(2));
+        assertEquals(BigInteger.valueOf(64), blumBlumShub.generateIBit(3));
     }
 }
