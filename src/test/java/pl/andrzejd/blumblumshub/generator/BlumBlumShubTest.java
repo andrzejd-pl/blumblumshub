@@ -23,12 +23,4 @@ class BlumBlumShubTest {
         assertEquals(BigInteger.valueOf(36), blumBlumShub.generateNext());
         assertEquals(BigInteger.valueOf(64), blumBlumShub.generateNext());
     }
-
-    @Test
-    void generateIBit() {
-        assertEquals(BigInteger.valueOf(15), blumBlumShub.generateIBit(0));
-        assertEquals(BigInteger.valueOf(71), blumBlumShub.generateIBit(1));
-        assertEquals(BigInteger.valueOf(36), blumBlumShub.generateIBit(2));
-        assertEquals(BigInteger.valueOf(64), blumBlumShub.generateIBit(3));
-    }
 }

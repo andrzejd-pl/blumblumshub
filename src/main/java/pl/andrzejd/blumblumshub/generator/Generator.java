@@ -7,8 +7,6 @@ public abstract class Generator {
 
     public abstract BigInteger generateNext();
 
-    public abstract BigInteger generateIBit(int i);
-
     public void setSeed(BigInteger seed) {
         this.seed = seed;
     }

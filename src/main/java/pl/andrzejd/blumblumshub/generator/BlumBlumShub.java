@@ -6,12 +6,17 @@ public class BlumBlumShub extends Generator {
     protected BigInteger blumNumber;
     protected BigInteger actualNumber;
     protected BigInteger beginNumber;
+    protected BigInteger p;
+    protected BigInteger q;
 
     public BlumBlumShub(int p, int q) {
         this(BigInteger.valueOf(p), BigInteger.valueOf(q));
     }
 
     public BlumBlumShub(BigInteger p, BigInteger q) {
+        this.p = p;
+        this.q = q;
+
         blumNumber = p.multiply(q);
     }
 
@@ -32,11 +37,6 @@ public class BlumBlumShub extends Generator {
                 .mod(blumNumber);
 
         return actualNumber;
-    }
-
-    @Override
-    public BigInteger generateIBit(int i) {
-        return null;
     }
 
     private void randomSeed() {
